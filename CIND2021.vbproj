@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CAD9960-29B5-413A-9B31-993318CE6528}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AIMContribucionesIncentivos.My.MyApplication</StartupObject>
+    <RootNamespace>AIMContribucionesIncentivos</RootNamespace>
+    <AssemblyName>IncentivosIndustriales2021</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SignAssembly>false</SignAssembly>
+    <ApplicationIcon>CIND2021.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>C:\Aimcorp\Aim.cind\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BackupPrj, Version=2021.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\BackupPrj.exe</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\Infragistics4.Shared.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\Infragistics4.Win.UltraWinEditors.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.6.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Visual Studio External Controls\PDFOne.NET-7.2.421.1045\Bin\Framework 4.0\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.PDFOne, Version=7.0.0.283, Culture=neutral, PublicKeyToken=c91dc0d609de7d5e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Visual Studio External Controls\PDFOne.NET-7.2.421.1045\Bin\Framework 4.0\Gnostice.PDFOne.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.PDFOne.PDFPrinter, Version=7.0.0.283, Culture=neutral, PublicKeyToken=c91dc0d609de7d5e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Visual Studio External Controls\PDFOne.NET-7.2.421.1045\Bin\Framework 4.0\Gnostice.PDFOne.PDFPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.PDFOne.Windows.PDFViewer, Version=7.0.0.283, Culture=neutral, PublicKeyToken=c91dc0d609de7d5e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Visual Studio External Controls\PDFOne.NET-7.2.421.1045\Bin\Framework 4.0\Gnostice.PDFOne.Windows.PDFViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.XtremeFontEngine.4.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=461de9da64be3a84, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Visual Studio External Controls\PDFOne.NET-7.2.421.1045\Bin\Framework 4.0\Gnostice.XtremeFontEngine.4.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.XtremeImageEngine.4.0, Version=12.0.1077.97, Culture=neutral, PublicKeyToken=67e9a3a7c22f1690, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Visual Studio External Controls\PDFOne.NET-7.2.421.1045\Bin\Framework 4.0\Gnostice.XtremeImageEngine.4.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\Infragistics4.Win.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zlib, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Visual Studio External Controls\PDFOne.NET-7.2.421.1045\Bin\Framework 4.0\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="LarcomAndYoung.Windows.Forms.ReSize">
+      <HintPath>C:\Aimcorp\Aim.cind\LarcomAndYoung.Windows.Forms.ReSize.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Visual Studio External Controls\PDFOne.NET-7.2.421.1045\Bin\Framework 4.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="NaicsSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\NaicsSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PLUSManaged, Version=5.16.1.0, Culture=neutral, PublicKeyToken=5d94a04f4eca59fc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\PLUSManaged.dll</HintPath>
+    </Reference>
+    <Reference Include="PLUSManaged.XmlSerializers, Version=5.16.1.0, Culture=neutral, PublicKeyToken=5d94a04f4eca59fc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Aimcorp\Aim.cind\PLUSManaged.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Classes\Autoupdate.vb" />
+    <Compile Include="Forms\AimSecure\ClientLicense.vb" />
+    <Compile Include="Forms\AimSecure\frmActivarManual.Designer.vb">
+      <DependentUpon>frmActivarManual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AimSecure\frmActivarManual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AimSecure\frmActivarOnline.designer.vb">
+      <DependentUpon>frmActivarOnline.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AimSecure\frmActivarOnline.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AimSecure\frmDesactivar.Designer.vb">
+      <DependentUpon>frmDesactivar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AimSecure\frmDesactivar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AimSecure\frmRegistracion.Designer.vb">
+      <DependentUpon>frmRegistracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AimSecure\frmRegistracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AimSecure\ProxyCredentialsForm.Designer.vb">
+      <DependentUpon>ProxyCredentialsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AimSecure\ProxyCredentialsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AimSecure\WebServiceHelper.vb" />
+    <Compile Include="Forms\Generales\AnejosEyE1.Designer.vb">
+      <DependentUpon>AnejosEyE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\AnejosEyE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\DatosEsp.designer.vb">
+      <DependentUpon>DatosEsp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\DatosEsp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\QueHayDeNuevo.designer.vb">
+      <DependentUpon>QueHayDeNuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\QueHayDeNuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\Viewer.designer.vb">
+      <DependentUpon>Viewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\Viewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\ViewerReaderMsg.Designer.vb">
+      <DependentUpon>ViewerReaderMsg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\ViewerReaderMsg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Incentivos\AnejoT.designer.vb">
+      <DependentUpon>AnejoT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Incentivos\AnejoT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Incentivos\AnejoB.Designer.vb">
+      <DependentUpon>AnejoB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Incentivos\AnejoB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Incentivos\EstadoSituacion20.Designer.vb">
+      <DependentUpon>EstadoSituacion20.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Incentivos\EstadoSituacion20.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Incentivos\IncentPagina1.designer.vb">
+      <DependentUpon>IncentPagina1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Incentivos\IncentPagina1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Incentivos\SC6042.designer.vb">
+      <DependentUpon>SC6042.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Incentivos\SC6042.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\DownloadUpdate.designer.vb">
+      <DependentUpon>DownloadUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DownloadUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\ErrMsgDialog.designer.vb">
+      <DependentUpon>ErrMsgDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\ErrMsgDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\Imprimir.designer.vb">
+      <DependentUpon>Imprimir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\Imprimir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\MdiMain.designer.vb">
+      <DependentUpon>MdiMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\MdiMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\NuevaPlanillaDlg.designer.vb">
+      <DependentUpon>NuevaPlanillaDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\NuevaPlanillaDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\OpenCustomer.designer.vb">
+      <DependentUpon>OpenCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\OpenCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\SplashScreen1.designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Generales\AnejoE.designer.vb">
+      <DependentUpon>AnejoE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Generales\AnejoE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Detalles\Detalle1.Designer.vb">
+      <DependentUpon>Detalle1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Detalles\Detalle1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\AimFunctions.vb" />
+    <Compile Include="Modules\FilesDef.vb" />
+    <Compile Include="Modules\Funciones.vb" />
+    <Compile Include="Modules\PrintIncentivos.vb" />
+    <Compile Include="Modules\Variables.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AimSecure\frmActivarManual.resx">
+      <DependentUpon>frmActivarManual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AimSecure\frmActivarOnline.resx">
+      <DependentUpon>frmActivarOnline.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AimSecure\frmDesactivar.resx">
+      <DependentUpon>frmDesactivar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AimSecure\frmRegistracion.resx">
+      <DependentUpon>frmRegistracion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AimSecure\ProxyCredentialsForm.resx">
+      <DependentUpon>ProxyCredentialsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\AnejosEyE1.resx">
+      <DependentUpon>AnejosEyE1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\DatosEsp.resx">
+      <DependentUpon>DatosEsp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\QueHayDeNuevo.resx">
+      <DependentUpon>QueHayDeNuevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\Viewer.resx">
+      <DependentUpon>Viewer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\ViewerReaderMsg.resx">
+      <DependentUpon>ViewerReaderMsg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Incentivos\AnejoT.resx">
+      <DependentUpon>AnejoT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Incentivos\AnejoB.resx">
+      <DependentUpon>AnejoB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Incentivos\EstadoSituacion20.resx">
+      <DependentUpon>EstadoSituacion20.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Incentivos\IncentPagina1.resx">
+      <DependentUpon>IncentPagina1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Incentivos\SC6042.resx">
+      <DependentUpon>SC6042.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\DownloadUpdate.resx">
+      <DependentUpon>DownloadUpdate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\ErrMsgDialog.resx">
+      <DependentUpon>ErrMsgDialog.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\Imprimir.resx">
+      <DependentUpon>Imprimir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\MdiMain.resx">
+      <DependentUpon>MdiMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\NuevaPlanillaDlg.resx">
+      <DependentUpon>NuevaPlanillaDlg.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\OpenCustomer.resx">
+      <DependentUpon>OpenCustomer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Generales\AnejoE.resx">
+      <DependentUpon>AnejoE.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Detalles\Detalle1.resx">
+      <DependentUpon>Detalle1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\SystemIcons.icl" />
+    <None Include="Icons\Thumbs.db" />
+    <None Include="Resources\FolderFlechaVerde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CIND2021.ico" />
+    <Content Include="Icons\AbrirPlanilla.png" />
+    <Content Include="Icons\Acerca.png" />
+    <Content Include="Icons\book-cd-vide-icon.png" />
+    <Content Include="Icons\Button-Previous-icon.png" />
+    <Content Include="Icons\Calulator.png" />
+    <Content Include="Icons\CheckMarkVerde.png" />
+    <Content Include="Icons\Contrasena.png" />
+    <Content Include="Icons\Contrasena2.png" />
+    <None Include="Resources\CIND-Opening-V3.png" />
+    <None Include="Resources\DeseC.png" />
+    <None Include="Resources\DeseH.png" />
+    <None Include="Resources\Dese.png" />
+    <None Include="Resources\Dese.bmp" />
+    <None Include="Icons\DatosEsp.png" />
+    <Content Include="Icons\DatosEspecialista.png" />
+    <None Include="Icons\DatosHead.png" />
+    <None Include="Icons\DatosEspH.png" />
+    <None Include="Icons\DatosEspHC.png" />
+    <Content Include="Icons\document-pencil-icon.png" />
+    <Content Include="Icons\Documents.ico" />
+    <Content Include="Icons\Etiquetas.png" />
+    <Content Include="Icons\FlechaAzulDerecha-Edited.png" />
+    <Content Include="Icons\FlechaAzulDerecha.png" />
+    <Content Include="Icons\FlechaAzulDerechaN.png" />
+    <Content Include="Icons\FlechaAzulHaciaIzquierda.png" />
+    <Content Include="Icons\FlechaAzulParaArriba.png" />
+    <Content Include="Icons\FlechaHaciaDerecha.png" />
+    <Content Include="Icons\FlechaHaciaDerechaN.png" />
+    <Content Include="Icons\FolderCrear.png" />
+    <Content Include="Icons\FolderFlechaVerde.png" />
+    <Content Include="Icons\Fonts.png" />
+    <Content Include="Icons\Fonts2.png" />
+    <Content Include="Icons\Fonts3.png" />
+    <Content Include="Icons\Forum.png" />
+    <Content Include="Icons\hand-guante.png" />
+    <Content Include="Icons\HombrePag1.png" />
+    <Content Include="Icons\HombrePag2.png" />
+    <Content Include="Icons\HombreYMujer.png" />
+    <Content Include="Icons\Impresora.bmp" />
+    <Content Include="Icons\Impresora.ico" />
+    <Content Include="Icons\Impresora.png" />
+    <Content Include="Icons\Impresora1.ico" />
+    <Content Include="Icons\Impresora1.png" />
+    <Content Include="Icons\Impresora2.ico" />
+    <Content Include="Icons\Impresora2.png" />
+    <Content Include="Icons\Impresora3.ico" />
+    <Content Include="Icons\ksysv_1448_128.png" />
+    <Content Include="Icons\LeftPoint.png" />
+    <Content Include="Icons\Lock-icon.png" />
+    <Content Include="Icons\LuzRoja.png" />
+    <Content Include="Icons\LuzVerde.png" />
+    <Content Include="Icons\magnifying-glass-icon.png" />
+    <Content Include="Icons\Margenes.png" />
+    <Content Include="Icons\Mayuscula.png" />
+    <Content Include="Icons\my-documents-icon.png" />
+    <Content Include="Icons\NuevaPlanilla.png" />
+    <Content Include="Icons\NuevaPlanilla16.png" />
+    <Content Include="Icons\NuevaPlanillaDD.png" />
+    <Content Include="Icons\NuevaPlanillaDDatos.png" />
+    <Content Include="Icons\nurse-icon.png" />
+    <Content Include="Icons\open-icon.png" />
+    <Content Include="Icons\open.ico" />
+    <Content Include="Icons\open.png" />
+    <Content Include="Icons\OpenInternet.png" />
+    <Content Include="Icons\print-icon2.png" />
+    <Content Include="Icons\Printer-icon.png" />
+    <Content Include="Icons\Printer-icon1.png" />
+    <Content Include="Icons\RightPoint.png" />
+    <Content Include="Icons\save-as- icon.png" />
+    <Content Include="Icons\save-as-icon.png" />
+    <Content Include="Icons\save-icon-new.png" />
+    <Content Include="Icons\save-icon.png" />
+    <Content Include="Icons\save-icon1.png" />
+    <Content Include="Icons\script-icon.png" />
+    <Content Include="Icons\Traffic_light.gif" />
+    <Content Include="Icons\UpdateNew.png" />
+    <Content Include="Icons\UpdatesV1.bmp" />
+    <Content Include="Icons\UpdatesV1.png" />
+    <Content Include="Icons\W2.png" />
+    <Content Include="Icons\X-icon.png" />
+    <None Include="Resources\BrowsC.png" />
+    <None Include="Resources\Brows.png" />
+    <None Include="Resources\BrowsH.png" />
+    <None Include="Resources\CreateC.png" />
+    <None Include="Resources\CreateH.png" />
+    <None Include="Resources\Create.png" />
+    <None Include="Resources\Tool.png" />
+    <None Include="Resources\ExitC.png" />
+    <None Include="Resources\ExitH.png" />
+    <None Include="Resources\Exit1.png" />
+    <None Include="Resources\ImprimirH.png" />
+    <None Include="Resources\ImprimirC.png" />
+    <None Include="Resources\Imprimir.png" />
+    <None Include="Resources\OKNewH.png" />
+    <None Include="Resources\OKNewC.png" />
+    <None Include="Resources\OKNew.png" />
+    <None Include="Resources\MsgHeader.png" />
+    <None Include="Resources\SalC.png" />
+    <None Include="Resources\SalH.png" />
+    <None Include="Resources\MsgC.png" />
+    <None Include="Resources\MsgH.png" />
+    <None Include="Resources\Msg1.png" />
+    <None Include="Resources\RenameC.png" />
+    <None Include="Resources\RenameH.png" />
+    <None Include="Resources\Rename.png" />
+    <None Include="Resources\PreC.png" />
+    <None Include="Resources\PreH.png" />
+    <None Include="Resources\Pre.png" />
+    <None Include="Resources\EditarC.png" />
+    <None Include="Resources\EditarH.png" />
+    <None Include="Resources\Editar.png" />
+    <None Include="Resources\InfCorp2C.png" />
+    <None Include="Resources\InfCorp2H.png" />
+    <None Include="Resources\InfCorp21.png" />
+    <None Include="Resources\Sal.png" />
+    <None Include="Resources\presioneH.png" />
+    <None Include="Resources\PresioneC .png" />
+    <None Include="Resources\Presione.png" />
+    <None Include="Resources\Terrac.png" />
+    <None Include="Resources\TerrarH.png" />
+    <None Include="Resources\TerrarC.png" />
+    <None Include="Resources\Terra1.png" />
+    <None Include="Resources\Terra.png" />
+    <None Include="Resources\InfCorp2.png" />
+    <None Include="Resources\Msg.png" />
+    <None Include="Resources\new2.jpg" />
+    <None Include="Resources\enter1_button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
